@@ -25,7 +25,7 @@ int busca_binaria(int *a, int n, int x){
 		else if (x > a[meio])
 			ini=meio+1;
 		else
-			return meio;
+			return meio+1;
 	}
 
 	return -1;
@@ -38,13 +38,7 @@ int main(){
 	int *pt= &a[0];
 	int x;
 
-	cin >> x;
+	x=8;
 
-	cout<<"Resposta: "<<
-		(busca_binaria(pt, 9, x) == -1 ? 
-			busca_binaria(pt, 9, x) : 
-			busca_binaria(pt, 9, x) + 1)
-		<<endl;
-
-	return 0;
+	cout<< "Resposta: " << busca_binaria(pt, 9, x)<<endl;
 }

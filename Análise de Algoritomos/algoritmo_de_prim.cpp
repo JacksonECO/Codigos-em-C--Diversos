@@ -11,7 +11,7 @@ using namespace std;
 
 bool numeros_como_resposta = true;
 
-void prim(int ini, int grafo[6][6]){
+void prim(int ini, int grafo[Size][Size]){
 	int custo[Size];
 	int ant[Size];
 	bool close[Size];
@@ -63,7 +63,7 @@ void prim(int ini, int grafo[6][6]){
 int main(int argc, char const *argv[]){
 
 //grafo em formato matriz de adjacencia.
-	int mat[6][6]={
+	int mat[Size][Size]={
 		0,5,6,4,0,0,
 		5,0,1,2,0,0,
 		6,1,0,2,5,3,
@@ -76,3 +76,15 @@ int main(int argc, char const *argv[]){
 
 	return 0;
 }
+/*
+0,5,6,4,0,0,
+		5,0,1,2,0,0,
+		6,1,0,2,5,3,
+		4,2,2,0,0,4,
+		0,0,5,0,0,4,
+		0,0,3,4,4,0,
+
+
+( 0-3 ) ( 3-1 ) ( 1-2 ) ( 2-5 ) ( 5-4 ) 
+Custo total: 14
+*/
